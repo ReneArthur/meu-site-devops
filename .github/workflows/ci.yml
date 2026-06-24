@@ -9,10 +9,10 @@ jobs:
 
     steps:
       - name: Checkout código
-      uses: actions/checkout@v4
+        uses: actions/checkout@v4
 
       - name: Listar arquivos
-      run: ls -la
+        run: ls -la
   validation:
     name: ✅ Validação
     runs-on: ubuntu-latest

@@ -13,6 +13,9 @@ jobs:
 
       - name: Listar arquivos
         run: ls -la
+
+      - name: Mostrar data
+        run: date
   validation:
     name: ✅ Validação
     runs-on: ubuntu-latest
@@ -28,6 +31,9 @@ jobs:
           fi
       - name: Validação concluída
         run: echo "Arquivo OK ✅"
+
+      - name: Mostrar data
+      run: date
   build:
     name: 🏗 Build (simulado)
     runs-on: ubuntu-latest
@@ -41,6 +47,9 @@ jobs:
           cp index.html dist/
       - name: Verificar dist
         run: ls -la dist
+
+      - name: Mostrar data
+      run: date
   deploy:
     name: 🚀 Deploy (informativo)
     runs-on: ubuntu-latest
@@ -49,3 +58,6 @@ jobs:
     steps:
       - name: Deploy
         run: echo "Cloudflare fará deploy automaticamente"
+
+      - name: Mostrar data
+      run: date

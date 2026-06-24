@@ -33,7 +33,7 @@ jobs:
         run: echo "Arquivo OK ✅"
 
       - name: Mostrar data
-      run: date
+        run: date
   build:
     name: 🏗 Build (simulado)
     runs-on: ubuntu-latest
@@ -49,7 +49,7 @@ jobs:
         run: ls -la dist
 
       - name: Mostrar data
-      run: date
+        run: date
   deploy:
     name: 🚀 Deploy (informativo)
     runs-on: ubuntu-latest
@@ -60,4 +60,4 @@ jobs:
         run: echo "Cloudflare fará deploy automaticamente"
 
       - name: Mostrar data
-      run: date
+        run: date

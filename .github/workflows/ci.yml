@@ -16,9 +16,12 @@ jobs:
 
       - name: Mostrar data
         run: date
+        
   validation:
     name: ✅ Validação
     runs-on: ubuntu-latest
+    depends: setup
+
     steps:
       - name: Checkout código
         uses: actions/checkout@v4
@@ -33,9 +36,12 @@ jobs:
 
       - name: Mostrar data
         run: date
+
   build:
     name: 🏗 Build (simulado)
     runs-on: ubuntu-latest
+    depends: validation
+
     steps:
       - name: Checkout código
         uses: actions/checkout@v4
@@ -48,9 +54,11 @@ jobs:
 
       - name: Mostrar data
         run: date
+
   deploy:
     name: 🚀 Deploy (informativo)
     runs-on: ubuntu-latest
+    depends: build
 
     steps:
       - name: Deploy
